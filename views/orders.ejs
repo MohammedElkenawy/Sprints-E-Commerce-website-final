@@ -1,0 +1,43 @@
+<%- include('./layouts/main-layout-header') %>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+            <div class="m-l-25 m-r--38 m-lr-0-xl">
+<div class="wrap-table-shopping-cart">
+    <% if(orders.length > 0) { %>
+        <% for (let order of orders) { %>
+            <table class="table-shopping-cart">
+                    <h1 style="margin-top: 30px; margin-bottom:10px">Order <%= order.dataValues.id %> </h1>
+                    <tr class="table_head">
+                        <th class="column-1">ID</th>
+                        <th class="column-2">product</th>
+                        <th class="column-3">qantity</th>
+                        <th class="column-4">price</th>
+                    </tr>
+                    <% order.products.forEach(product => { %>
+                        <tr class="table_row">
+
+                            <td class="column-1">
+                                <%= order.dataValues.id %>
+                            </td>
+                            <td class="column-2"><%= product.name %></td>
+                            <td class="column-3">
+                                <%= product.orderItem.quantity %>
+                            </td>
+                            <td class="column-4">$ <%= product.orderItem.dataValues.quantity * product.price %></td>
+                            <td class="column-5"></td>
+                        </tr>
+                    <% }); %>
+
+    <% } %>
+    <% } else { %>
+        <h1>No products to show in the cart </h1>
+    <% } %>
+                </table>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<%- include('./layouts/main-layout-footer') %>

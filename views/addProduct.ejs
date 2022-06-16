@@ -1,0 +1,74 @@
+<%- include('./layouts/main-layout-header') %>
+
+	<!-- Product Detail -->
+	<section class="sec-product-detail bg0 p-t-65 p-b-60">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-lg-7 p-b-30">
+					<form action="/addProduct" method="POST" enctype="multipart/form-data" class="addProductForm p-l-25 p-r-30 p-lr-0-lg">
+                        <h1>Add New Product</h1><br>
+                        <label for="">Upload Image</label>
+                        <input type="file" name="imageUploaded" value="" required>
+                        <!-- <div class="p-r-50 p-t-5 p-lr-0-lg"> -->
+                            <h4 class="mtext-105 cl2 js-name-detail p-b-14">
+                                <label for="">Name</label>
+                                <input type="text" name="productName" value="" class="header-cart-item-txt p-t-8" required>
+                            </h4>
+    
+                            <h4 class="mtext-105 cl2 js-name-detail p-b-14">
+                                <label for="">Price</label>
+                                <input type="number" name="productPrice" value="" class="header-cart-item-txt p-t-8" required>
+                            </h4>
+    
+     
+
+                            <h4 class="mtext-105 cl2 js-name-detail p-b-14">
+                                <label for="">Stock</label>
+                                <input type="number" name="productStock" value="" class="header-cart-item-txt p-t-8" required>
+                            </h4>
+
+                            <h4 class="mtext-105 cl2 js-name-detail p-b-14">
+                                <label for="">Coupon</label>
+                                <input type="text" name="productCoupon" value="" class="header-cart-item-txt p-t-8" required>
+                            </h4>
+                            <!--  -->
+                            <h4 class="mtext-105 cl2 js-name-detail p-b-14">
+                                <label for="">Description</label>
+                                <input type="textarea" name="productDescription" value="" class="header-cart-item-txt p-t-8" required>
+                            </h4>
+
+                            <h4 class="mtext-105 cl2 js-name-detail p-b-14">
+                                <button type="submit" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+                                    Add Product
+                                </button>                            
+                            </h4>
+
+
+                            <div class="p-t-33">
+
+                            </div>
+    
+                            <!--  -->
+                        <!-- </div> -->
+					</form>
+
+				</div>
+					
+				<div class="col-md-6 col-lg-5 p-b-30">
+
+				</div>
+			</div>
+		</div>
+
+		<div class="bg6 flex-c-m flex-w size-302 m-t-73 p-tb-15">
+			<span class="stext-107 cl6 p-lr-25">
+				SKU: JAK-01
+			</span>
+
+			<span class="stext-107 cl6 p-lr-25">
+				Categories: Jacket, Men
+			</span>
+		</div>
+	</section>
+
+<%- include('./layouts/main-layout-footer') %>
