@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    max-height: 5200px;
+}
+.container {
+    /* width: 1170px; */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+
+/* Register */
+.signin-page form,
+.login-page form {
+    width: 350px;
+    margin: auto;
+    margin-top: 10%;
+}
+.signin-page form .form-label::before,
+.login-page form .form-label::before {
+    content: "*";
+    color: #f00;
+    margin-right: 4px;
+}
+.signin-page form .form-check-input {margin-top: 8px;}
+.signin-page form button.signin {
+    display: inline-block;
+    width: 50%;
+    margin-left: 50px;
+}
+.signin-page form .login,
+.login-page form button{
+    display: block;
+    width: 100%;
+    font-size: large;
+    font-weight: bold;
+}
